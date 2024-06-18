@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Llantas",
+        "price": 100.0
+    },
+    {
+        "id": 2,
+        "name": "Motor",
+        "price": 200.0
+    },
+    {
+        "id": 3,
+        "name": "Fundas Asientos",
+        "price": 300
+    },
+    {
+        "id": 4,
+        "name": "Parrilla",
+        "price": 150.62
+    }
+]
