@@ -3,13 +3,13 @@ package com.moises.springboot.di.springboot_di.repositories;
 import java.util.Collections;
 import java.util.List;
 
-// import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 import com.moises.springboot.di.springboot_di.models.Product;
 
-// @Primary
-@Repository
+@Primary
+@Repository("productFoo")
 public class ProductRepositoryFooImpl implements ProductRepository {
 
     @Override
