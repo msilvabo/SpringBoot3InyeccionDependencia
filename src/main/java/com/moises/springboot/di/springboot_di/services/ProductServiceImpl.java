@@ -14,13 +14,13 @@ import com.moises.springboot.di.springboot_di.repositories.ProductRepository;
 @Service
 public class ProductServiceImpl implements ProductService {
 
-    @Autowired
-    @Qualifier("productFoo")
+    // @Autowired
+    // @Qualifier("productFoo")
     private ProductRepository repository;
     
-    // public ProductServiceImpl(@Qualifier("productFoo") ProductRepository repository) {
-    //     this.repository = repository;
-    // }
+    public ProductServiceImpl(@Qualifier("productList") ProductRepository repository) {
+        this.repository = repository;
+    }
 
     // @Autowired   
     // public void setRepository(ProductRepository repository) {
@@ -31,10 +31,11 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> findAll(){
         return repository.findAll().stream().map(p -> {
             Double priceTax = p.getPrice() * 1.25d;
-            // p.setPrice(p.getPrice() * 1.25d);
             Product newProd = (Product) p.clone(); 
             newProd.setPrice(priceTax);
             return newProd; 
+            // p.setPrice(priceTax);
+            // return p;
         }).collect(Collectors.toList());
     }
 
