@@ -20,7 +20,11 @@ public class SomeController {
 
     @Autowired       
     private ProductService services;
-   
+  
+    // public SomeController(ProductService services) {
+    //     this.services = services;
+    // }
+
     @GetMapping("")
     public List<Product> list(){
         return services.findAll();

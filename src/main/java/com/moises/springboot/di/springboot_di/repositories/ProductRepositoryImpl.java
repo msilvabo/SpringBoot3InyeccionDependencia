@@ -16,7 +16,7 @@ public class ProductRepositoryImpl implements ProductRepository {
             new Product(1L, "Cpu Intel i9", 100),
             new Product(2L, "Memoria ddr4", 200),
             new Product(3L, "Teclado Raizer Mini", 20.5),
-            new Product(3L, "Tarjeta Madre", 120.5)
+            new Product(4L, "Tarjeta Madre", 120.5)
             );
     }
 
