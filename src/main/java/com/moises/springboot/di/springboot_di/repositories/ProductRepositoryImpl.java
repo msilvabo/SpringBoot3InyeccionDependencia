@@ -3,8 +3,11 @@ package com.moises.springboot.di.springboot_di.repositories;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.moises.springboot.di.springboot_di.models.Product;
 
+@Component
 public class ProductRepositoryImpl implements ProductRepository {
     private List<Product> data;
 
