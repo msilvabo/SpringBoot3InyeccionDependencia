@@ -1,26 +1,10 @@
 package com.moises.springboot.di.springboot_di.services;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 import com.moises.springboot.di.springboot_di.models.Product;
-import com.moises.springboot.di.springboot_di.repositories.ProductRepository;
 
-public class ProductService {
-
-    private ProductRepository repository = new ProductRepository();
-
-    public List<Product> finAll(){
-        return repository.findAll().stream().map(p -> {
-            Double priceTax = p.getPrice() * 1.25d;
-            // p.setPrice(p.getPrice() * 1.25d);
-            Product newProd = (Product) p.clone(); 
-            newProd.setPrice(priceTax);
-            return newProd; 
-        }).collect(Collectors.toList());
-    }
-
-    public Product finbyId (Long id){
-        return repository.findbyId(id);
-    }
+public interface ProductService  {
+    List<Product> findAll();
+    Product findbyId(Long id);
 }
