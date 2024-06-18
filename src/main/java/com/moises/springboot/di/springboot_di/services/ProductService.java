@@ -12,9 +12,10 @@ public class ProductService {
 
     public List<Product> finAll(){
         return repository.findAll().stream().map(p -> {
-            Double priceImp = p.getPrice() * 1.25d;
+            Double priceTax = p.getPrice() * 1.25d;
             // p.setPrice(p.getPrice() * 1.25d);
-            Product newProd = new Product(p.getId(), p.getName(), priceImp);
+            Product newProd = (Product) p.clone(); 
+            newProd.setPrice(priceTax);
             return newProd; 
         }).collect(Collectors.toList());
     }
