@@ -3,7 +3,7 @@ package com.moises.springboot.di.springboot_di.repositories;
 import java.util.Arrays;
 import java.util.List;
 
-import org.springframework.context.annotation.Primary;
+// import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 // import org.springframework.web.context.annotation.RequestScope;
 // import org.springframework.web.context.annotation.SessionScope;
