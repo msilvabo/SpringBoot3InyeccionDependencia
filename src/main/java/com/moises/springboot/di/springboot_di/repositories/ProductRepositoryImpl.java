@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import com.moises.springboot.di.springboot_di.models.Product;
 
 // @RequestScope
-@Primary
+// @Primary
 @Repository("productList")
 public class ProductRepositoryImpl implements ProductRepository {
     private List<Product> data;
